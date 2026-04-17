@@ -13,6 +13,11 @@
     execute if score DeathSwap.Pearls DeathSwap matches 1 run tellraw @s [{text: "Enderpearls: [", color: dark_gray}, {text: "Remove After Time", color: yellow, bold: true, click_event: {action: "run_command", command: "/function deathswap:config/pearlon"}}, {text: "]", color: dark_gray, bold: false}]
     execute if score DeathSwap.Pearls DeathSwap matches 2 run tellraw @s [{text: "Enderpearls: [", color: dark_gray}, {text: "On", color: green, bold: true, click_event: {action: "run_command", command: "/function deathswap:config/pearloff"}}, {text: "]", color: dark_gray, bold: false}]
 
+# Reset Advancements
+    execute if score DeathSwap.Advancements DeathSwap matches 0 run tellraw @s [{text: "Reset Advancements: [", color: dark_gray}, {text: "False", color: red, bold: true, click_event: {action: "run_command", command: "/function deathswap:config/resetadvancements"}}, {text: "]", color: dark_gray, bold: false}]
+    execute if score DeathSwap.Advancements DeathSwap matches 1 run tellraw @s [{text: "Reset Advancements: [", color: dark_gray}, {text: "True", color: green, bold: true, click_event: {action: "run_command", command: "/function deathswap:config/dontresetadvancements"}}, {text: "]", color: dark_gray, bold: false}]
+
+
 tellraw @s {text: ""}
 
 # Timings

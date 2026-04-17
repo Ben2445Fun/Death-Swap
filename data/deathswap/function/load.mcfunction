@@ -1,6 +1,9 @@
-team add DeathSwap
-team modify DeathSwap seeFriendlyInvisibles false
-scoreboard objectives add DeathSwap dummy
-scoreboard objectives add DeathSwap.PearlAge dummy
-scoreboard objectives add DeathSwap.Join trigger
-execute unless score DeathSwap.Min DeathSwap matches 0.. run function deathswap:firsttimesetup
+# Create team and modify settings
+    team add DeathSwap
+    team modify DeathSwap seeFriendlyInvisibles false
+
+# Create scoreboard objective for configuration
+    scoreboard objectives add DeathSwap dummy
+
+# First time setup
+    execute unless score DeathSwap.Min DeathSwap matches 0.. run function deathswap:firsttimesetup
