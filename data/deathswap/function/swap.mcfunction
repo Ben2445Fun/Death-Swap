@@ -8,3 +8,4 @@ function deathswap:getnotteleported
 scoreboard objectives remove DeathSwap.X
 scoreboard objectives remove DeathSwap.Y
 scoreboard objectives remove DeathSwap.Z
+function deathswap:randomizetime with storage deathswap:data

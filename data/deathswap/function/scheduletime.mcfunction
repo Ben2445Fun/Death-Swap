@@ -1,1 +1,1 @@
-$schedule function deathswap:swap $(time)
+$schedule function deathswap:swap $(time)s
