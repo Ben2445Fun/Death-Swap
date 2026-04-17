@@ -18,6 +18,11 @@ kill @e[distance=0.., type=item]
 clear @a[team=DeathSwap]
 effect give @a[team=DeathSwap] regeneration 5 20
 effect give @a[team=DeathSwap] saturation 5 20
+bossbar add deathswap {text: "Players Remaining", color: gray}
+bossbar set deathswap color red
+bossbar set deathswap players @a
+execute store result bossbar deathswap max if entity @a[team=DeathSwap]
+execute store result bossbar deathswap value if entity @a[team=DeathSwap]
 function deathswap:spreadplayers with storage deathswap:data
 function deathswap:randomizetime with storage deathswap:data
 execute as @a[team=DeathSwap] at @s run function deathswap:info
