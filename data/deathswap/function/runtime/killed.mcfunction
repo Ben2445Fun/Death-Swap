@@ -13,5 +13,5 @@
     tellraw @a [{selector: "@s", color: red, bold: true}, {text: " has been eliminated!", color: white, bold: false}]
 
 # Check if round is over
-    execute store result score DeathSwap.Players DeathSwap if entity @a[team=DeathSwap]
+    function deathswap:runtime/playersremaining
     execute if score DeathSwap.Players DeathSwap matches ..1 as @p[team=DeathSwap] run function deathswap:end

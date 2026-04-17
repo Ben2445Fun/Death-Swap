@@ -28,6 +28,9 @@
     bossbar set deathswap color red
     bossbar set deathswap players @a
 
+# Count number of players
+    function deathswap:runtime/playersremaining
+
 # Start Round
     function deathswap:onstart/spreadplayers with storage deathswap:data
     function deathswap:runtime/randomizetime with storage deathswap:data
