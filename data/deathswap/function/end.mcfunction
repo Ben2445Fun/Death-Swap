@@ -6,7 +6,7 @@
     tag @a remove DeathSwap.Unswapped
 
 # Stop running functions
-    schedule clear deathswap:runtime/callactionbar
+    schedule function deathswap:clearactionbar 1t
     schedule clear deathswap:runtime/periodicallyremovepearls
     schedule clear deathswap:swap/beginswap
 
