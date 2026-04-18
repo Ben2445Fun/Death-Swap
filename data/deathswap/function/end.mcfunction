@@ -22,4 +22,5 @@
 
 # Put all players at spawn
     gamemode survival @a
-    spreadplayers 0.0 0.0 1 16 false @a
+    spawnpoint @a 0 0 0
+    tp @a 0.0 0.0 0.0
