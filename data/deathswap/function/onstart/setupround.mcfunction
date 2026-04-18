@@ -1,6 +1,11 @@
+# Test if there's at least 2 players
+    execute store result score DeathSwap.Players DeathSwap if entity @a[scores={DeathSwap.Join = 1..}]
+    execute if score DeathSwap.Players DeathSwap matches ..1 run return run function deathswap:notenoughplayers
+
 # Put all tributes on team and remove tribute option
     team join DeathSwap @a[scores={DeathSwap.Join = 1..}]
     scoreboard objectives remove DeathSwap.Join
+    gamemode spectator @a[team=!DeathSwap]
 
 # Set team settings
     function deathswap:onstart/teamsettings

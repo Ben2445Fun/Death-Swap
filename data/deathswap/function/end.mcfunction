@@ -8,7 +8,7 @@
 # Stop running functions
     schedule clear deathswap:runtime/callactionbar
     schedule clear deathswap:runtime/periodicallyremovepearls
-    schedule clear deathswap:swap/swap
+    schedule clear deathswap:swap/beginswap
 
 # Announce Victor
     title @a title {selector: "@s", color: green}
@@ -17,8 +17,9 @@
 
 # Cleanup
     scoreboard objectives remove DeathSwap.Deaths
+    scoreboard objectives remove DeathSwap.PearlAge
     bossbar remove deathswap
 
 # Put all players at spawn
     gamemode survival @a
-    spreadplayers 0.0 0.0 0 1 false @a
+    spreadplayers 0.0 0.0 1 16 false @a
