@@ -7,6 +7,9 @@
     scoreboard objectives remove DeathSwap.Join
     gamemode spectator @a[team=!DeathSwap]
 
+# Clear advancements if enabled
+    execute if score DeathSwap.Advancements DeathSwap matches 1 run advancement revoke @a everything
+
 # Set team settings
     function deathswap:onstart/teamsettings
 

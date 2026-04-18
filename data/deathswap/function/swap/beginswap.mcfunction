@@ -1,22 +1,16 @@
 # Reset tags for the next swap
-    tag @a remove DeathSwap.PositionSwapped
     tag @a remove DeathSwap.PlayerSwapped
 
-# Create storage for positional data
-    scoreboard objectives add DeathSwap.X dummy
-    scoreboard objectives add DeathSwap.Y dummy
-    scoreboard objectives add DeathSwap.Z dummy
-
-# Store player positions
-    execute as @a[team=DeathSwap] run function deathswap:swap/storepos
+# Store first player's position and swap them with another
+    tag @r[team=DeathSwap] add DeathSwap.PlayerToSwap
+    tag @r[team=DeathSwap, tag=!DeathSwap.PlayerToSwap] add DeathSwap.PositionToSwap
+    execute as @r[tag=DeathSwap.PlayerToSwap] run function deathswap:swap/storepos
+    execute as @r[tag=DeathSwap.PositionToSwap] run function deathswap:swap/removepos
 
 # Teleport players to other positions
-    function deathswap:swap/swapplayers
-
-# Removed stored positional data
-    scoreboard objectives remove DeathSwap.X
-    scoreboard objectives remove DeathSwap.Y
-    scoreboard objectives remove DeathSwap.Z
+    execute store result score DathSwap.Unswapped DeathSwap if entity @a[team=DeathSwap, tag=!DeathSwap.PlayerToSwap]
+    execute if score DathSwap.Unswapped DeathSwap matches 2.. run function deathswap:swap/swapplayers
+    execute as @r[tag=DeathSwap.PlayerToSwap] run function deathswap:swap/lastplayerswap with storage deathswap:data
 
 # Randomize time again
     function deathswap:runtime/randomizetime with storage deathswap:data

@@ -1,1 +1,2 @@
-tag @r[team=DeathSwap, tag=!DeathSwap.PlayerSwapped] add DeathSwap.PlayerToSwap
+$execute in $(dim) run teleport @s $(x) $(y) $(z)
+tag @s remove DeathSwap.PlayerToSwap
