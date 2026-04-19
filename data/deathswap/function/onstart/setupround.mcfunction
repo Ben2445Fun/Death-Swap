@@ -43,5 +43,5 @@
 
 # Start Round
     function deathswap:onstart/spreadplayers with storage deathswap:data
-    function deathswap:runtime/randomizetime with storage deathswap:data
+    function deathswap:onstart/gracesettings
     execute as @a[team=DeathSwap] at @s run function deathswap:onstart/startround
