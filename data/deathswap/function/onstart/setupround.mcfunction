@@ -28,8 +28,10 @@
 # "Reset" world for game
     kill @e[distance=0.., type=item]
     clear @a[team=DeathSwap]
+    xp set @a 0
     effect give @a[team=DeathSwap] regeneration 5 20
     effect give @a[team=DeathSwap] saturation 5 20
+    gamerule locator_bar false
 
 # Create bossbar for counting
     bossbar add deathswap {text: "Players Remaining: ", color: gray}

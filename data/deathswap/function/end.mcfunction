@@ -19,8 +19,10 @@
     scoreboard objectives remove DeathSwap.Deaths
     scoreboard objectives remove DeathSwap.PearlAge
     bossbar remove deathswap
+    gamerule locator_bar true
 
 # Put all players at spawn
     gamemode survival @a
     spawnpoint @a 0 0 0
-    tp @a 0.0 0.0 0.0
+    setworldspawn 0 0 0
+    spreadplayers 0.0 0.0 1 32 false @a
