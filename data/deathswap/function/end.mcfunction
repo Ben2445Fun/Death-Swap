@@ -4,6 +4,7 @@
 # Stop running functions
     schedule function deathswap:clearactionbar 1t
     schedule clear deathswap:runtime/periodicallyremovepearls
+    schedule clear deathswap:runtime/removeallpearls
     schedule clear deathswap:swap/beginswap
 
 # Announce Victor

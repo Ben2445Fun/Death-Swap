@@ -1,0 +1,1 @@
+function deathswap:uninstall
