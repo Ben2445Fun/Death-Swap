@@ -6,5 +6,5 @@
     execute as @r[tag=DeathSwap.PositionToSwap] run function deathswap:swap/setnext
 
 # Test if any other players need swapping
-    execute store result score DathSwap.Unswapped DeathSwap if entity @a[team=DeathSwap, tag=!DeathSwap.PlayerSwapped]
-    execute if score DathSwap.Unswapped DeathSwap matches 2.. run function deathswap:swap/swapplayers
+    execute store result score DeathSwap.Unswapped DeathSwap if entity @a[team=DeathSwap, tag=!DeathSwap.PlayerSwapped]
+    execute if score DeathSwap.Unswapped DeathSwap matches 2.. run function deathswap:swap/swapplayers

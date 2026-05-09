@@ -1,7 +1,8 @@
-scoreboard players set DeathSwap.Min DeathSwap 180
-scoreboard players set DeathSwap.Max DeathSwap 420
-scoreboard players set DeathSwap.PVP DeathSwap 0
-scoreboard players set DeathSwap.Pearls DeathSwap 1
+function deathswap:config/disablepvp
+function deathswap:config/pearlage
+function deathswap:config/enablegrace
+function deathswap:config/resetadvancements
+scoreboard players set DeathSwap.MinTime DeathSwap 180
+scoreboard players set DeathSwap.MaxTime DeathSwap 420
 scoreboard players set DeathSwap.MinDistance DeathSwap 512
 scoreboard players set DeathSwap.MaxDistance DeathSwap 4096
-scoreboard players set DeathSwap.Grace DeathSwap 1

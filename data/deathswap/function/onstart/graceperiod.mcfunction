@@ -1,4 +1,4 @@
-scoreboard players operation DeathSwap.Time DeathSwap = DeathSwap.Max DeathSwap
+scoreboard players operation DeathSwap.Time DeathSwap = DeathSwap.MaxTime DeathSwap
 scoreboard players operation DeathSwap.Time DeathSwap *= #DeathSwap.2 DeathSwap
 execute store result storage deathswap:data time int 1 run scoreboard players get DeathSwap.Time DeathSwap
 execute store result bossbar deathswap max run scoreboard players get DeathSwap.Time DeathSwap

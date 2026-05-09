@@ -1,0 +1,4 @@
+execute if score DeathSwap.Time DeathSwap matches 60.. run return run bossbar set deathswap name [{text: "Players Remaining: ", color: gray}, {score: {name: "DeathSwap.Players", objective: "DeathSwap"}, color: red, bold: true},{text: " | Next Swap in >60 seconds", color: gray}]
+execute if score DeathSwap.Time DeathSwap matches 11..60 run return run bossbar set deathswap name [{text: "Players Remaining: ", color: gray}, {score: {name: "DeathSwap.Players", objective: "DeathSwap"}, color: red, bold: true},{text: " | Next Swap in <60 seconds", color: gray}]
+bossbar set deathswap name [{text: "Players Remaining: ", color: gray}, {score: {name: "DeathSwap.Players", objective: "DeathSwap"}, color: red, bold: true},{text: " | Next Swap in <10 seconds", color: gray}]
+execute store result bossbar deathswap value run scoreboard players get DeathSwap.Time DeathSwap

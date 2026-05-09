@@ -1,2 +1,2 @@
-data merge storage deathswap:data {pearlstext: "Disallowed", pearlscolor: red}
+data merge storage deathswap:data {pearlstext: "not allowed", pearlscolor: red}
 function deathswap:runtime/removeallpearls
