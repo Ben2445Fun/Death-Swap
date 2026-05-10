@@ -35,9 +35,6 @@ tellraw @s {text: ""}
 
 tellraw @s {text: ""}
 
-# Update
-    tellraw @s {text: "Update Datapack", bold: true, color: green, click_event: {action: "run_command", command: "/function deathswap:backup"}}
-
 # Uninstall
     tellraw @s {text: "Uninstall Datapack", bold: true, color: red, hover_event: {action: "show_text", value: {text: "!! WARNING !! This is irriversible!", color: red}}, click_event: {action: "run_command", command: "/function deathswap:uninstall"}}
 
